@@ -130,3 +130,64 @@ BEGIN
 END$$
 
 DELIMITER ;
+
+
+-- =========================
+-- INCERTS DE EJEMPLO
+-- =========================
+
+INSERT INTO usuarios (nombre, correo, telefono) VALUES
+('Ana López', 'ana.lopez@mail.com', '5512345678'),
+('Carlos Méndez', 'carlos.mendez@mail.com', '5523456789'),
+('Lucía Ramírez', 'lucia.ramirez@mail.com', '5534567890'),
+('Jorge Torres', 'jorge.torres@mail.com', '5545678901'),
+('María Fernández', 'maria.fernandez@mail.com', '5556789012');
+
+INSERT INTO servicios (nombre, descripcion) VALUES
+('Consultoría en Sistemas', 'Análisis y mejora de sistemas de información'),
+('Ciberseguridad', 'Auditorías y protección de infraestructura digital'),
+('Desarrollo de Software', 'Soluciones de software a medida'),
+('Análisis de Datos', 'Procesamiento e interpretación de datos empresariales'),
+('Soporte Tecnológico', 'Mantenimiento y soporte técnico especializado');
+
+INSERT INTO especializaciones (nombre, descripcion) VALUES
+('Sistemas Empresariales', 'Optimización de sistemas corporativos'),
+('Seguridad Informática', 'Protección de datos y redes'),
+('Desarrollo Web', 'Aplicaciones web modernas'),
+('Business Intelligence', 'Análisis estratégico de información'),
+('Infraestructura TI', 'Gestión de hardware y redes');
+
+INSERT INTO servicio_especializacion VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5);
+
+INSERT INTO proyectos (nombre, descripcion, empresa, fecha_inicio, fecha_fin) VALUES
+('Sistema ERP', 'Implementación de ERP empresarial', 'Empresa Alpha', '2024-01-10', '2024-06-15'),
+('Auditoría de Seguridad', 'Evaluación de seguridad informática', 'TechSecure', '2024-02-01', '2024-03-20'),
+('Plataforma Web', 'Desarrollo de portal corporativo', 'WebCorp', '2023-11-05', '2024-02-28'),
+('Dashboard BI', 'Panel de control de datos', 'DataVision', '2024-03-01', '2024-05-30'),
+('Soporte TI', 'Mantenimiento de infraestructura', 'NetSolutions', '2023-09-01', '2024-01-31');
+
+INSERT INTO comentarios_empresas (id_proyecto, empresa, comentario, calificacion) VALUES
+(1, 'Empresa Alpha', 'El sistema mejoró notablemente nuestra operación.', 5),
+(2, 'TechSecure', 'Auditoría clara y bien documentada.', 4),
+(3, 'WebCorp', 'La plataforma cumplió con todas las expectativas.', 5),
+(4, 'DataVision', 'Excelente análisis y visualización de datos.', 5),
+(5, 'NetSolutions', 'Soporte eficiente y rápido.', 4);
+
+INSERT INTO contactos (tipo, valor) VALUES
+('telefono', '5511122233'),
+('telefono', '5522233344'),
+('correo', 'contacto@consultoria.com'),
+('correo', 'soporte@consultoria.com'),
+('correo', 'ventas@consultoria.com');
+
+INSERT INTO mensajes_clientes (id_usuario, id_servicio, mensaje) VALUES
+(1, 1, 'Me interesa mejorar el sistema de mi empresa'),
+(2, 2, 'Quisiera una auditoría de seguridad'),
+(3, 3, 'Busco desarrollar una aplicación web'),
+(4, 4, 'Necesito análisis de datos para mi negocio'),
+(5, 5, 'Requiero soporte técnico constante');
