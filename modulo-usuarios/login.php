@@ -13,7 +13,7 @@ if ($_POST) {
         $usuario = $resultado->fetch_assoc();
         if (password_verify($password, $usuario['password'])) {
             $_SESSION['usuario'] = $correo;
-            header("Location: dashboard.php");
+            header("Location: dashabord.php");
         }
     }
 }
