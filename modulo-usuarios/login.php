@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("config/conexion.php");
+include("../config/conexion.php");
 
 if ($_POST) {
     $correo = $_POST['correo'];
