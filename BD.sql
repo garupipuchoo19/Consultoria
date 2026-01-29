@@ -191,3 +191,17 @@ INSERT INTO mensajes_clientes (id_usuario, id_servicio, mensaje) VALUES
 (3, 3, 'Busco desarrollar una aplicación web'),
 (4, 4, 'Necesito análisis de datos para mi negocio'),
 (5, 5, 'Requiero soporte técnico constante');
+
+INSERT INTO administradores (nombre, correo, password_hash, rol) VALUES
+(
+  'Jade Montalvo Valle',
+  'montalvojadee@gmail.com',
+  SHA2('JASDFG02', 256),
+  'admin'
+),
+(
+  'Cristopher Isaac Leon Olvera',
+  'crizaak@gmail.com',
+  SHA2('IsaaC1987', 256),
+  'admin'
+);
