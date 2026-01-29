@@ -1,5 +1,5 @@
 <?php
-include("config/conexion.php");
+include("../config/conexion.php");
 if ($_POST) {
     $nombre = $_POST['nombre'];
     $correo = $_POST['correo'];
@@ -17,7 +17,7 @@ if ($_POST) {
 <head>
     <meta charset="UTF-8">
     <title>Registro</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
 <div class="container">
