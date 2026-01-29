@@ -23,3 +23,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+<form method="POST">
+    <h2>Registro de Usuario</h2>
+    <input type="text" name="nombre" placeholder="Nombre completo" required>
+    <input type="email" name="correo" placeholder="Correo electrónico" required>
+    <input type="text" name="telefono" placeholder="Teléfono">
+    <button type="submit">Registrarse</button>
+</form>
