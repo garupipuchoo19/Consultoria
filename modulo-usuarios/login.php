@@ -24,3 +24,23 @@ if ($_POST) {
     }
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+<div class="container">
+    <h2>Iniciar sesión</h2>
+    <form method="POST">
+        <input type="email" name="correo" placeholder="Correo" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <button>Entrar</button>
+    </form>
+</div>
+
+</body>
+</html>
