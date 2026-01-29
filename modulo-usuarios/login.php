@@ -18,7 +18,8 @@ if ($_POST) {
 
         if (password_verify($password, $usuario['password'])) {
             $_SESSION['usuario'] = $correo;
-            header("Location: dashabord.php");
+            echo "LOGIN OK";
+            header("Location: index.php");
             exit;
         }
     }
