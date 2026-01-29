@@ -1,4 +1,5 @@
 <?php
+require_once("../config/conexion.php");
 session_start();
 if (!isset($_SESSION['usuario'])) {
     header("Location: login.php");
@@ -10,7 +11,7 @@ if (!isset($_SESSION['usuario'])) {
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
 
