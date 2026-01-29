@@ -2,35 +2,53 @@
 session_start();
 if (!isset($_SESSION['usuario'])) {
     header("Location: login.php");
+    exit();
 }
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Panel de Usuario</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-<div class="container">
-    <h2>Bienvenido</h2>
-    <p style="text-align:center;"><?php echo $_SESSION['usuario']; ?></p>
+<div class="dashboard">
 
-    <h3>Servicios disponibles</h3>
-    <ul class="servicios">
-        <li>Consultoría Digital</li>
-        <li>Estrategia de Marketing</li>
-        <li>Publicidad Online</li>
-        <li>Branding</li>
-    </ul>
-    <h3>Solicitar ayuda</h3>
-    <form action="enviar_correo.php" method="POST">
-        <textarea name="mensaje" placeholder="Describe tu necesidad..." required></textarea>
-        <button>Enviar solicitud</button>
-    </form>
+    <!-- HEADER -->
+    <header class="dashboard-header">
+        <h2>Panel de Usuario</h2>
+        <span class="usuario">👤 <?php echo $_SESSION['usuario']; ?></span>
+        <a href="logout.php" class="btn-logout">Cerrar sesión</a>
+    </header>
 
-    <a href="logout.php"><button>Cerrar sesión</button></a>
+    <!-- CONTENIDO -->
+    <main class="dashboard-content">
+
+        <!-- SERVICIOS -->
+        <section class="card">
+            <h3>Servicios disponibles</h3>
+            <ul class="servicios">
+                <li>Consultoría Digital</li>
+                <li>Estrategia de Marketing</li>
+                <li>Publicidad Online</li>
+                <li>Branding</li>
+            </ul>
+        </section>
+
+        <!-- FORMULARIO -->
+        <section class="card">
+            <h3>Solicitar ayuda</h3>
+            <form action="enviar_correo.php" method="POST">
+                <textarea name="mensaje" placeholder="Describe tu necesidad..." required></textarea>
+                <button type="submit">Enviar solicitud</button>
+            </form>
+        </section>
+
+    </main>
+
 </div>
+
 </body>
 </html>
