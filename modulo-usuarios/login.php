@@ -1,13 +1,9 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 session_start();
-include("../config/conexion.php");
+require_once("../config/conexion.php");
 
-if ($_POST) {
-    $correo = $_POST['correo'];
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $correo   = $_POST['correo'];
     $password = $_POST['password'];
 
     $sql = "SELECT * FROM usuarios WHERE correo='$correo'";
@@ -17,12 +13,12 @@ if ($_POST) {
         $usuario = $resultado->fetch_assoc();
 
         if (password_verify($password, $usuario['password'])) {
-            $_SESSION['usuario'] = $correo;
-            echo "LOGIN OK";
-            header("Location: index.php");
-            exit;
+            $_SESSION['usuario'] = $usuario['correo'];
+            header("Location: dashboard.php");
+            exit();
         }
     }
+    $error = "Credenciales incorrectas";
 }
 ?>
 

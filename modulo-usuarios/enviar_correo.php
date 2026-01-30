@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("config/conexion.php");
+include("../config/conexion.php");
 
 $correo = $_SESSION['usuario'];
 $mensaje = $_POST['mensaje'];
@@ -25,3 +25,4 @@ Consultoría Digital Estratégica
 mail($correo, $asunto, $respuesta);
 
 header("Location: dashboard.php");
+exit();
