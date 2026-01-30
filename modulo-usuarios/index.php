@@ -34,7 +34,7 @@ $contactos = $conexion->query(
 <head>
     <meta charset="UTF-8">
     <title>Consultoría Digital Estratégica</title>
-    <link rel="stylesheet" href="..\css/estilos.css">
+    <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
 
