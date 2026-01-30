@@ -1,0 +1,179 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+/* =========================
+   CONTENEDOR LOGIN / REGISTRO
+========================= */
+.contenedor-login {
+    background: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.contenedor-login h2 {
+    color: #1e3c72;
+    margin-bottom: 10px;
+}
+
+.contenedor-login p {
+    font-size: 14px;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+/* =========================
+   FORMULARIO
+========================= */
+form {
+    text-align: left;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #1e3c72;
+    outline: none;
+}
+
+/* =========================
+   BOTONES
+========================= */
+button {
+    width: 100%;
+    background: #1e3c72;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #16315c;
+}
+
+/* =========================
+   MENSAJES
+========================= */
+.mensaje-error {
+    background: #fdecea;
+    color: #b71c1c;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.mensaje-exito {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* =========================
+   LINKS
+========================= */
+.registro {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.registro a {
+    color: #1e3c72;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.registro a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+.dashboard {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard h1 {
+    color: #1e3c72;
+    margin-bottom: 20px;
+}
+
+.dashboard .info {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+/* =========================
+   BOTÓN CERRAR SESIÓN
+========================= */
+.boton-salir {
+    background: #b71c1c;
+    margin-top: 20px;
+}
+
+.boton-salir:hover {
+    background: #7f0000;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 480px) {
+    .contenedor-login {
+        padding: 25px;
+    }
+}
